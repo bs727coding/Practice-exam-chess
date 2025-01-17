@@ -13,14 +13,13 @@ public class ChessBoard {
     private ChessPiece[][] board = new ChessPiece[8][8];
 
     public ChessBoard() {
-        resetBoard();
     }
 
     public String toString() {
         StringBuilder answer = new StringBuilder();
-        for (int i = 7; i >= 0; i--) {
+        for (int i = 8; i > 0; i--) {
             answer.append("|");
-            for (int j = 7; j >= 0; j--) {
+            for (int j = 8; j > 0; j--) {
                 answer.append(getPiece(new ChessPosition(i, j))).append("|");
             }
             answer.append("\n");
